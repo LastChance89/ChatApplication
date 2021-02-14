@@ -1,0 +1,17 @@
+.input-body{
+    width:550px;
+    height:150px;
+    resize:none;
+}
+.response-body{
+    width:550px;
+    height:250px;
+    resize:none;
+}
+.current-user{
+    color:blue
+}
+
+.div1{
+    margin-bottom:50px;
+}
