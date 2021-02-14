@@ -9,8 +9,8 @@ function init(){
     client.connect({},  (frame)=>{
         console.log('Connected');
         //This subscribes to our backend sendTo on the controller.
-        client.subscribe('/messsage',  (greeting)=>{
-            testMe(greeting);
+        client.subscribe('/messsage',  (response)=>{
+            testMe(response);
         })
     })
 
