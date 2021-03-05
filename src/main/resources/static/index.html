@@ -14,24 +14,24 @@
 
 <body onload="init()">
 
-  <form id = "form">
+  <form id="form">
 
-    <div>
-      <p>Enter UserName here. </p>
-      <input id="username"> </input>
+    <div id='responsArea' class="response">
     </div>
 
-
-
-    <div class = "div1">
-      <textarea id="input" class="input-body" placeholder="test" type="text"> </textarea>
-      <button id="fire">FIRE!</button>
-    </div>
-
-    <div id='responsArea'>
-
-    </div>
-
+      <div>
+        <div>
+          <p>Enter UserName here. </p>
+          <input id="username"> </input>
+        </div>
+      </div>
+      <div class="div1">
+        <textarea onchange="setButtonDisabled();" id="input" class="input-body" placeholder="test" type="text" onChange = ""> </textarea>
+        <div id="button_container">
+          <button disabled="isDisabled" id="fire">FIRE!</button>
+        </div>
+      </div>
+    
 
   </form>
 
