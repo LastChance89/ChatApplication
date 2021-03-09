@@ -4,14 +4,34 @@
     resize:none;
 }
 .response-body{
-    width:550px;
+    width:29%;
     height:250px;
     resize:none;
 }
 .current-user{
-    color:blue
+    color:blue;
 }
 
 .div1{
     margin-bottom:50px;
+}
+
+.display{
+    float:left;
+    width:45%;
+    border: solid;
+}
+
+.response{
+    height: 80%;
+    width: 29%;
+    overflow: auto;
+    border: solid;
+}
+
+html,body{
+    height: 99%;
+}
+form{
+    height: 80%;
 }

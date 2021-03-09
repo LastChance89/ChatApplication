@@ -13,7 +13,7 @@ public class CommunicationController {
 	//The Send To is the URL that all subscribers 
 	//are listening too. In this case, /messsage
 	@SendTo("/messsage")
-	public UserMessage TestMessage(UserMessage response) {
+	public UserMessage sendUserMessage(UserMessage response) {
 		return response;
 	}
 
