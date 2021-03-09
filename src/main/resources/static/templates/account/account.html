@@ -1,23 +1,37 @@
 <!doctype html>
-
+<link rel="stylesheet" href="../../css/account.css">
 
 <html lang="en">
 
 <head>
-        <meta charset = "utf-8">
-        <title>Account</title>
-        <base href = "/createAccount">
+    <meta charset="utf-8">
+    <title>Account</title>
+    <base href="/createAccount">
 </head>
 
-<body> 
+<body>
 
+   
 
+    <form id="accountFrom" onsubmit="createAccount()" class="container">
+        <h3>Account Creation</h3>
+        <label>User Name</label>
+        <div>
+            <input id="Username" type="text" placeholder="Enter Username">
+        </div>
+        <label>Password</label>
+        <div>
+            <input id="password" type="text" placeholder="Enter Username">
+        </div>
+        <label>Email</label>
+        <div>
+            <input id="email" type="text" placeholder="Enter Email">
+        </div>
+        
+        <input type="submit">
 
-    
+    </form>
 </body>
-
-
-
 
 
 </html>
