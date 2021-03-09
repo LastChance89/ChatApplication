@@ -3,7 +3,7 @@
 <script src="/webjars/jquery/jquery.min.js"></script>
 <script src="/webjars/sockjs-client/sockjs.min.js"></script>
 <script src="/webjars/stomp-websocket/stomp.min.js"></script>
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="./css/login.css">
 <html lang="en">
 
 <head>
@@ -12,29 +12,26 @@
   <base href="">
 </head>
 
-<body onload="init()">
+<body>
+  <form>
 
-  <form id="form">
+    <div class="login-container">
+      <h3>Application Login</h3>
+      <div class="container">
+          <input id="nameInput" type="text"  placeholder="Enter Username">
+          <input id="password" type="password"  placeholder="Enter Password">
+      </div>
 
-    <div id='responsArea' class="response">
+      <div id="button">
+        <Button id="login" onclick="login()">login</Button>
+      </div>
+
+      <div class="link-container">
+        <a id="createAccountLink" class="create-link" href="">Create Account</a>
+        <a id="forgetPasswordButton" href="javascript:void(0);"> Forget Password?</a>
+      </div>
     </div>
-
-      <div>
-        <div>
-          <p>Enter UserName here. </p>
-          <input id="username"> </input>
-        </div>
-      </div>
-      <div class="div1">
-        <textarea onchange="setButtonDisabled();" id="input" class="input-body" placeholder="test" type="text" onChange = ""> </textarea>
-        <div id="button_container">
-          <button disabled="isDisabled" id="fire">FIRE!</button>
-        </div>
-      </div>
-    
-
   </form>
-
 </body>
 
 
