@@ -39,5 +39,6 @@ function init() {
 
 function setButtonDisabled() {
     document.getElementById("fire").disabled = document.getElementById("input").value != "" ? false : true;
-    
+
 }
+

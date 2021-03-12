@@ -1,9 +1,9 @@
 class User{
-    constructor(username, password, createdDate, passwordExp, hint, email, status ){
+    constructor(username, password, email, hint, createdDate, status ){
         this.username = username; 
         this.password = password; 
         this.createdDate = createdDate; 
-        this.passwordExp = passwordExp;
+        //this.passwordExp = passwordExp; Not sure where I want to set this yet. 
         this.hint = hint; 
         this.email = email;
         this.status = status;
@@ -18,9 +18,6 @@ class User{
     getHint(){
         return this.hint;
     }
-    
-    
-
 }
 
-
+export {User};

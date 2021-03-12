@@ -1,6 +1,7 @@
 <!doctype html>
 <link rel="stylesheet" href="../../css/account.css">
-
+<script  type="module" src="../../script/account.js"></script>
+<script src="/webjars/jquery/jquery.min.js"></script>
 <html lang="en">
 
 <head>
@@ -11,9 +12,7 @@
 
 <body>
 
-   
-
-    <form id="accountFrom" onsubmit="createAccount()" class="container">
+    <form id="accountFrom" onsubmit="createAccount(event)" class="container">
         <h3>Account Creation</h3>
         <label>User Name</label>
         <div>
@@ -21,14 +20,17 @@
         </div>
         <label>Password</label>
         <div>
-            <input id="password" type="text" placeholder="Enter Username">
+            <input id="password" type="password" placeholder="Enter Username">
         </div>
         <label>Email</label>
         <div>
             <input id="email" type="text" placeholder="Enter Email">
         </div>
+        <div> 
+            <input id="hint" type = "text" placeholder = "Enter password hint">
+        </div>
         
-        <input type="submit">
+        <button id = "submit">Submit</button>
 
     </form>
 </body>
