@@ -1,11 +1,13 @@
 import {User} from './user.js';
 import {setupAjax} from './setup.js';
 
-document.getElementById("submit").addEventListener("click", createAccount, false);
+
+
+$("#submit").on("click",createAccount);
 
 function createAccount(e){
     e.preventDefault();
-    let createdDate = new Date().toLocaleDateString('en-US',
+    let createdDate = new Date().toLocaleDateString('fr-CA',
     {
         year:'numeric',
         day: 'numeric',

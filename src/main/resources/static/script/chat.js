@@ -14,9 +14,9 @@ function init() {
         })
     })
 
-    //event listener adders 
-    document.getElementById("fire").addEventListener("click", makeCall, false);
+    $("#fire").on("click",makeCall);
 
+    
     function makeCall(e) {
         e.preventDefault();
         client.send("/app/sendMessage", {}, JSON.stringify({ 'userName': document.getElementById('username').value, 'message': document.getElementById('input').value }));

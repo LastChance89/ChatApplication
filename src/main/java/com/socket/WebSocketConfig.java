@@ -1,4 +1,4 @@
-package main.java.com.Socket;
+package main.java.com.socket;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.simp.config.MessageBrokerRegistry;
