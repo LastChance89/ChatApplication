@@ -16,5 +16,9 @@ public class MainServiceImpl implements MainService {
 	public String createUser(User user) {
 		return userDao.createUser(user);
 	}
+	
+	public User login(String[] credentials) {
+		return userDao.loginUser(credentials);
+	}
 
 }
