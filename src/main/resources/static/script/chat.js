@@ -1,5 +1,9 @@
+import {User} from './user.js';
+import {setupAjax} from './setup.js';
 
 var client = null;
+
+$("#login").on("click",login);
 
 
 
@@ -42,3 +46,13 @@ function setButtonDisabled() {
 
 }
 
+function login(e){
+    e.preventDefault();
+    let creds = {"creds": [$("#nameInput").val(),$("#password").val()]};
+    $(document).ready(function(){
+        setupAjax("http://localhost:8080/login", creds);
+        $.ajax().then((data)=>{
+            console.log(data);
+        });
+    });
+}

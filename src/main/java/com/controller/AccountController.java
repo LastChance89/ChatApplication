@@ -1,5 +1,8 @@
 package main.java.com.controller;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -22,8 +25,8 @@ public class AccountController {
 	}
 	
 	@PostMapping("/login")
-	public User login(@RequestBody String[] credentials) {
-		return mainService.login(credentials);
+	public User login(@RequestBody Map<String,List<String>>credentials) {
+		return mainService.login(credentials.get("creds"));
 	}
 	
 }

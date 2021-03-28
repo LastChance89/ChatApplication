@@ -1,5 +1,7 @@
 package main.java.com.dao.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -16,7 +18,7 @@ public class UserDaoImpl implements UserDao {
 	JdbcTemplate template;
 
 	private static final String CREATE_USER_QUERY = "INSERT INTO USER VALUES (?,?,?,?,?,?)";
-	private static final String LOGIN_USER_QUERY = "SELECT USERNAME FROM USER WHERE USER_NAME = ? AND PASSWORD = ?";
+	private static final String LOGIN_USER_QUERY = "SELECT USER_NAME FROM USER WHERE USER_NAME = ? AND PASSWORD = ?";
 
 	@Override
 	public String createUser(User user) {
@@ -32,8 +34,8 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	@Override
-	public User loginUser(String[] credentials) {
-		return template.query(LOGIN_USER_QUERY , new Object[] {credentials[0], credentials[1]}, new int[] {}, new UserLoginExtractor());
+	public User loginUser(List<String> credentials) {
+		return template.query(LOGIN_USER_QUERY , new Object[] {credentials.get(0), credentials.get(1)}, new int[] {12,12}, new UserLoginExtractor());
 	}
 	
 	

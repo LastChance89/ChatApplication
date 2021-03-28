@@ -5,6 +5,7 @@ import {setupAjax} from './setup.js';
 
 $("#submit").on("click",createAccount);
 
+
 function createAccount(e){
     e.preventDefault();
     let createdDate = new Date().toLocaleDateString('fr-CA',
@@ -21,8 +22,7 @@ function createAccount(e){
         $.ajax().then((data)=>{
             console.log(data);
         })
-
-
     });
 
 }
+

@@ -1,8 +1,9 @@
 <!doctype html>
-<script src="../script/chat.js"></script>
+<script  type="module" src="../script/chat.js"></script>
 
 <script src="/webjars/sockjs-client/sockjs.min.js"></script>
 <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/webjars/jquery/jquery.min.js"></script>
 <link rel="stylesheet" href="./css/login.css">
 <html lang="en">
 
@@ -23,7 +24,7 @@
       </div>
 
       <div id="button">
-        <Button id="login" onclick="login()">login</Button>
+        <Button id="login">login</Button>
       </div>
 
       <div class="link-container">
