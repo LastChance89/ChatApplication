@@ -31,7 +31,8 @@ function init() {
 
 
 function makeCall() {
-    client.send("/app/sendMessage", {}, JSON.stringify({ 'userName': document.getElementById('username').value, 'message': document.getElementById('input').value }));
+    let payload = JSON.stringify({ 'userName': document.getElementById('username').value, 'message': document.getElementById('input').value });
+    client.send("/app/sendMessage", {}, payload) ;
     document.getElementById('input').value = '';
     document.getElementById("fire").disabled = true;
 }
