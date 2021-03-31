@@ -1,6 +1,10 @@
 <!doctype html>
-<script src="../script/chat.js"/>
+<script type="module" src="../script/chat.js"> </script>
 <link rel="stylesheet" href="../css/main.css">
+<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+<script src="/webjars/jquery/jquery.min.js"></script>
+
 <html lang="en">
 
 <head>
@@ -9,10 +13,9 @@
   <base href="">
 </head>
 
-<body onload="init()">
+<body id="chatBody" >
 
   <form id="form">
-
     <div id='responsArea' class="response">
     </div>
 
@@ -23,7 +26,7 @@
         </div>
       </div>
       <div class="div1">
-        <textarea onchange="setButtonDisabled();" id="input" class="input-body" placeholder="test" type="text" onChange = ""> </textarea>
+        <textarea id="input" class="input-body" placeholder="test" type="text"></textarea>
         <div id="button_container">
           <button disabled="isDisabled" id="fire">FIRE!</button>
         </div>

@@ -9,7 +9,8 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("main.java.com.controller," 
 		+"main.java.com.service," 
 		+"main.java.com.security,"
-		+"main.java.com.dao"
+		+"main.java.com.dao,"
+		+"main.java.com.socket"
 		//+" com.global.jdbctemplate"
 		)
 public class Main extends SpringBootServletInitializer {
